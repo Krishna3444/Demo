@@ -1,0 +1,13 @@
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+pydantic==2.10.4
+PyJWT==2.10.1
+argon2-cffi==23.1.0
+httpx==0.28.1
+
+# Testing
+pytest==8.3.4
+
+# NOTE: The original Flask prototype also ran on:
+#   flask==3.0.3, flask-cors==4.0.1, pyjwt==2.9.0
+# It is preserved at legacy_flask/app.py but no longer the main server.

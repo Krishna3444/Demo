@@ -1,0 +1,382 @@
+/* Custom Dhaniti styling — layered on top of Bootstrap 5 */
+
+:root {
+  --dhaniti-primary: #0f766e;
+  --dhaniti-primary-dark: #134e4a;
+  --dhaniti-accent: #14b8a6;
+}
+
+body {
+  background-color: #f8fafc;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Brand color overrides */
+.bg-dhaniti {
+  background: linear-gradient(135deg, #0f766e 0%, #134e4a 100%) !important;
+  color: white !important;
+}
+
+.text-dhaniti {
+  color: var(--dhaniti-primary) !important;
+}
+
+.btn-dhaniti {
+  background-color: var(--dhaniti-primary);
+  border-color: var(--dhaniti-primary);
+  color: white;
+}
+
+.btn-dhaniti:hover {
+  background-color: var(--dhaniti-primary-dark);
+  border-color: var(--dhaniti-primary-dark);
+  color: white;
+}
+
+.btn-outline-dhaniti {
+  color: var(--dhaniti-primary);
+  border-color: var(--dhaniti-primary);
+}
+
+.btn-outline-dhaniti:hover {
+  background-color: var(--dhaniti-primary);
+  color: white;
+}
+
+/* Login card */
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f766e 0%, #134e4a 100%);
+  padding: 1rem;
+}
+
+.login-card {
+  max-width: 440px;
+  width: 100%;
+  border: none;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  border-radius: 0.75rem;
+}
+
+.login-card .card-header {
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 1.5rem 1.5rem 1rem;
+}
+
+/* KPI cards */
+.kpi-card {
+  border: none;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+  border-radius: 0.625rem;
+  height: 100%;
+  transition: transform 0.15s ease;
+}
+
+.kpi-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
+}
+
+.kpi-card .kpi-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #6b7280;
+}
+
+.kpi-card .kpi-value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-top: 0.3rem;
+  color: #0f172a;
+}
+
+.kpi-card .kpi-sub {
+  font-size: 0.7rem;
+  color: #9ca3af;
+  margin-top: 0.2rem;
+}
+
+.kpi-card.accent-total    { border-left: 4px solid #0f766e; }
+.kpi-card.accent-approved { border-left: 4px solid #059669; }
+.kpi-card.accent-review   { border-left: 4px solid #d97706; }
+.kpi-card.accent-rejected { border-left: 4px solid #e11d48; }
+.kpi-card.accent-amount   { border-left: 4px solid #7c3aed; }
+
+/* Chart cards */
+.chart-card {
+  border: none;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+  border-radius: 0.625rem;
+  height: 100%;
+}
+
+.chart-card .card-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #0f172a;
+}
+
+.chart-canvas-wrap {
+  height: 240px;
+  position: relative;
+}
+
+/* Insight cards */
+.insight-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.625rem;
+  height: 100%;
+}
+
+.insight-card .metric-pill {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #0f766e;
+  background: #ccfbf1;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.insight-card .finding {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #0f172a;
+}
+
+.insight-card .calc-box {
+  font-size: 0.78rem;
+  color: #6b7280;
+  background: #f8fafc;
+  padding: 0.5rem 0.65rem;
+  border-radius: 0.375rem;
+  border: 1px solid #e5e7eb;
+  line-height: 1.5;
+}
+
+.insight-card .why-box {
+  font-size: 0.8rem;
+  color: #475569;
+  line-height: 1.5;
+}
+
+.insight-card .why-box::before {
+  content: "Why it matters \u2014 ";
+  font-weight: 700;
+  color: #0f766e;
+}
+
+/* Data-quality pills */
+.dq-pill {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.dq-flag {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+/* Status badges */
+.badge-status-submitted   { background: #e2e8f0; color: #475569; }
+.badge-status-under-review { background: #fef3c7; color: #92400e; }
+.badge-status-approved     { background: #d1fae5; color: #065f46; }
+.badge-status-rejected     { background: #fee2e2; color: #991b1b; }
+
+.badge-attention-low    { background: #d1fae5; color: #065f46; }
+.badge-attention-review { background: #fef3c7; color: #92400e; }
+.badge-attention-high   { background: #fee2e2; color: #991b1b; }
+
+/* Table tweaks */
+.table-apps {
+  font-size: 0.78rem;
+}
+
+.table-apps thead th {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #475569;
+  background: #f1f5f9;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.table-apps td {
+  white-space: nowrap;
+  padding: 0.5rem 0.6rem;
+}
+
+.table-apps .text-num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Sort buttons */
+.sort-btn {
+  padding: 0.2rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 0.3rem;
+  border: 1px solid #d1d5db;
+  background: white;
+  cursor: pointer;
+}
+
+.sort-btn.active {
+  background: #0f766e;
+  color: white;
+  border-color: #0f766e;
+}
+
+.sort-btn:hover:not(.active) {
+  background: #f1f5f9;
+}
+
+/* Sticky footer */
+.app-footer {
+  background: #0f172a;
+  color: #94a3b8;
+  padding: 1rem 1.5rem;
+  font-size: 0.78rem;
+  text-align: center;
+  margin-top: auto;
+}
+
+.app-header {
+  background: linear-gradient(135deg, #0f766e 0%, #134e4a 100%);
+  color: white;
+  padding: 0.75rem 1.5rem;
+}
+
+.app-header .brand {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.app-header .user-badge {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+}
+
+main.app-main {
+  padding: 1.5rem 0;
+  min-height: calc(100vh - 130px);
+}
+
+.section-card {
+  border: none;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+  border-radius: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-card .card-header {
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+/* Alerts */
+.alert-dismissible .btn-close {
+  padding: 1rem;
+}
+
+/* =========================================================
+   Upgrade: auth pages, OTP input, navbar, modals
+   ========================================================= */
+
+.app-navbar {
+  box-shadow: 0 2px 12px rgba(15, 118, 110, 0.25);
+}
+
+.app-navbar .nav-link {
+  color: rgba(255, 255, 255, 0.75);
+  border-radius: 8px;
+  padding: 0.4rem 0.85rem;
+}
+
+.app-navbar .nav-link:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.app-navbar .nav-link.active {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+  font-weight: 600;
+}
+
+/* OTP boxes */
+.otp-box {
+  width: 48px;
+  height: 56px;
+  text-align: center;
+  font-size: 1.45rem;
+  font-weight: 700;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 10px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.otp-box:focus {
+  border-color: var(--dhaniti-primary);
+  box-shadow: 0 0 0 0.2rem rgba(15, 118, 110, 0.15);
+  outline: none;
+}
+
+.otp-box:disabled {
+  background: #f1f5f9;
+  color: #94a3b8;
+}
+
+@media (max-width: 400px) {
+  .otp-box {
+    width: 40px;
+    height: 48px;
+    font-size: 1.2rem;
+  }
+}
+
+/* Password rules checklist */
+.password-rules .small {
+  font-size: 0.8rem;
+}
+
+/* Cursor helpers */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* Table action buttons */
+.table-apps .btn-group-sm > .btn {
+  padding: 0.15rem 0.5rem;
+}
+
+/* Ensure modals render above everything */
+.modal.d-block {
+  overflow-y: auto;
+}
+
+/* Small screens: tighten application table paddings */
+@media (max-width: 575.98px) {
+  .table-apps th,
+  .table-apps td {
+    padding: 0.35rem 0.4rem;
+    white-space: nowrap;
+  }
+}
